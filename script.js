@@ -20,3 +20,15 @@
     document.getElementById("wochentag2").innerHTML=weekday;
     console.log(weekday)
 }
+{
+    const jahr = new Date().getFullYear()
+    const FullYear = jahr
+    document.getElementById("jahre").innerHTML = FullYear
+    console.log(FullYear)
+}
+{
+    const Datum = new Date
+    const nummer = Math.ceil(Datum.getDate() / 7);
+    document.getElementById("wieviel").innerHTML = nummer
+    console.log(nummer)
+}
