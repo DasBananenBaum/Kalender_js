@@ -32,3 +32,17 @@
     document.getElementById("wieviel").innerHTML = nummer
     console.log(nummer)
 }
+fetch("https://feiertage-api.de/api/?jahr=2026&nur_land=HE")
+    .then(response => response.json())
+    .then(data => {
+        const heute = new Date().toISOString().split("T")[0];
+        const ausgabe = document.getElementById("feiertagabfrage");
+
+        for (const feiertag in data) {
+            if (data[feiertag].datum === heute) {
+                ausgabe.innerHTML = `<span>🎉 Heute ist ${feiertag}</span>`;
+                return;
+            }
+        }
+        ausgabe.innerHTML = `<span>Heute ist kein Feiertag.</span>`;
+    });
