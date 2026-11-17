@@ -1,9 +1,5 @@
-body {
-    background-image: linear-gradient(to right, yellow,orange,red);
-}
 h1 {
     text-align: center;
-    color:black;
     font-size: 300%;
     text-decoration: underline;
     font-family: Arial, Helvetica, sans-serif;
@@ -23,6 +19,12 @@ h1 {
     font-size: 100%;
     gap: 2px;
     background-color: rgb(213,213,213);
+}
+#item1 {
+    grid-area: box-1;
+}
+#item2 {
+    grid-area: box-2;
 }
 p {
     color: black;
@@ -96,4 +98,57 @@ ul {
     width: 90%;
     position: relative;
     bottom:20px;
+}
+body {
+    background-color: white;
+    color: rgb(10, 10, 10);
+    transition: 0.3s;
+}
+
+body.darkmode {
+    background-color: #222;
+    color: white;
+}
+
+/* Schieberegler zum Positionieren und Größe */
+.switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #302d2d;
+    border-radius: 34px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: rgb(238, 234, 234);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: rgb(213, 213, 213);
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
 }

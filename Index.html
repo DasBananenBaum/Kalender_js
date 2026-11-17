@@ -8,13 +8,17 @@
 </head>
 <body>
     <h1 id="main-headline">Kalenderblatt vom 06.10.2026</h1>
+    <label class="switch">
+    <input type="checkbox" id="darkmode-toggle">
+    <span class="slider"></span>
+    </label>
     <div class="grid-container">
-    <div class="item" style="grid-area: box-1;"><p>
+    <div id="item1" class="item" style="grid-area: box-1;"><p>
         Der <span id="Datum"></span> ist ein <span id="wochentag1"></span> und zwar der <span id="wieviel"></span>. 
         <span id="wochentag2"></span> des Monat <span id="monat"></span> des Jahres <span id="jahre"></span>.
        <span id="feiertagabfrage"></span>
     </div></p>
-    <div class="item" style="grid-area: box-2;">
+    <div id="item2" class="item" style="grid-area: box-2;">
         <table border="1">
         <thead>
             <tr>    
